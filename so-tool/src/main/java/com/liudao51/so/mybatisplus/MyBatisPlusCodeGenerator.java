@@ -1,4 +1,4 @@
-package com.liudao51.so.tool.mybatisplus;
+package com.liudao51.so.mybatisplus;
 
 import com.baomidou.mybatisplus.annotation.DbType;
 import com.baomidou.mybatisplus.annotation.FieldFill;
@@ -83,7 +83,7 @@ public class MyBatisPlusCodeGenerator {
         DataSourceConfig dsc = new DataSourceConfig();
         dsc.setDbType(DbType.MYSQL);
         //dsc.setTypeConvert(new MySqlTypeConvert());
-        dsc.setUrl("jdbc:mysql://192.168.99.131:3306/liudao51_test?useSSL=false&useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT%2B8");
+        dsc.setUrl("jdbc:mysql://192.168.99.131:3306/liudao51_so?useSSL=false&useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT%2B8");
         dsc.setDriverName("com.mysql.jdbc.Driver");
         dsc.setUsername("root");
         dsc.setPassword("123456");
@@ -97,7 +97,7 @@ public class MyBatisPlusCodeGenerator {
         pc.setParent("com.liudao51.so");
         pc.setEntity("entity.po");
         pc.setMapper("mapper");
-        pc.setService("service");
+        pc.setService("facade");
         pc.setServiceImpl("service.impl");
         pc.setController("controller");
         mpg.setPackageInfo(pc);
@@ -162,7 +162,7 @@ public class MyBatisPlusCodeGenerator {
             public String outputFile(TableInfo tableInfo) {
                 String moduleNamePath = (pc.getModuleName() != null && !"".equals(pc.getModuleName().trim())) ? pc.getModuleName().trim() + "/" : "";
                 //自定义输出文件名，如果你的Entity设置了前后缀，此处注意xml的名称会跟着发生变化
-                return projectPath + moduleNamePath + "/src/main/java/com/liudao51/test/mapper/" + tableInfo.getEntityName() + "Mapper.xml";
+                return projectPath + moduleNamePath + "/src/main/java/com/liudao51/so/mapper/" + tableInfo.getEntityName() + "Mapper.xml";
             }
         });
         /*
@@ -200,7 +200,7 @@ public class MyBatisPlusCodeGenerator {
         tc.setController("mp_templates/controller.java");
         //如上任何一个模块如果设置为空字符串(或null)，则将不生成该模块
         mpg.setTemplate(tc);
-        
+
 
         //6.执行生成
         mpg.execute();

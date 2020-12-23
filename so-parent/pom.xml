@@ -31,23 +31,40 @@
 
     <dependencyManagement>
         <dependencies>
+            <!-- start 以下驱动不需要管理，由spring-boot-starter-parent管理，除非你要强制替换默认的版本 -->
             <!-- springboot 支持web -->
-            <dependency>
+            <!--<dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-web</artifactId>
-            </dependency>
+                <version>2.2.5.RELEASE</version>
+            </dependency>-->
             <!-- springboot 支持junit（内嵌junit包） -->
-            <dependency>
+            <!--<dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-test</artifactId>
+                <version>2.2.5.RELEASE</version>
                 <scope>test</scope>
-            </dependency>
-
+            </dependency>-->
             <!-- 数据库驱动 -->
-            <dependency>
+            <!--<dependency>
                 <groupId>mysql</groupId>
                 <artifactId>mysql-connector-java</artifactId>
-            </dependency>
+                <version>8.0.19</version>
+            </dependency>-->
+            <!-- lombok -->
+            <!--<dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>1.18.12</version>
+            </dependency>-->
+            <!-- apache commons工具类 -->
+            <!--<dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>3.9</version>
+            </dependency>-->
+            <!-- end 以上驱动不需要管理-->
+
             <!-- druid 数据库连接池-->
             <dependency>
                 <groupId>com.alibaba</groupId>
@@ -141,22 +158,11 @@
                 <artifactId>springfox-swagger-ui</artifactId>
                 <version>2.9.2</version>
             </dependency>
-            <!-- lombok -->
-            <dependency>
-                <groupId>org.projectlombok</groupId>
-                <artifactId>lombok</artifactId>
-            </dependency>
             <!-- fastjson -->
             <dependency>
                 <groupId>com.alibaba</groupId>
                 <artifactId>fastjson</artifactId>
                 <version>1.2.47</version>
-            </dependency>
-            <!-- apache commons工具类 -->
-            <dependency>
-                <groupId>org.apache.commons</groupId>
-                <artifactId>commons-lang3</artifactId>
-                <version>3.9</version>
             </dependency>
             <!-- google guava工具类-->
             <dependency>
