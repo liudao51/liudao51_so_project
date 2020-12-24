@@ -114,17 +114,17 @@ public class MyBatisPlusCodeGenerator {
         //strategy.setColumnNaming(NamingStrategy.underline_to_camel); //列名生成策略
         //---设置entity类
         //strategy.setSuperEntityClass(); //你自己的父类实体,没有就不用设置
-        strategy.setSuperEntityColumns(null); //写于父类中的公共字段
+        //strategy.setSuperEntityColumns(null); //写于父类中的公共字段
         strategy.setEntityLombokModel(true); //实体设置lombok
         strategy.setVersionFieldName("version"); //设置乐观锁字段名
-        strategy.setLogicDeleteFieldName("deleted"); //设置逻辑删除字段名
+        //strategy.setLogicDeleteFieldName("deleted"); //设置逻辑删除字段名
         //---设置自动填充
-        TableFill createdTime = new TableFill("created_time", FieldFill.INSERT);
-        TableFill updatedTime = new TableFill("updated_time", FieldFill.INSERT_UPDATE);
-        ArrayList<TableFill> tableFills = new ArrayList<>();
-        tableFills.add(createdTime);
-        tableFills.add(updatedTime);
-        strategy.setTableFillList(tableFills);
+        //TableFill createdTime = new TableFill("created_time", FieldFill.INSERT);
+        //TableFill updatedTime = new TableFill("updated_time", FieldFill.INSERT_UPDATE);
+        //ArrayList<TableFill> tableFills = new ArrayList<>();
+        //tableFills.add(createdTime);
+        //tableFills.add(updatedTime);
+        //strategy.setTableFillList(tableFills);
         // ---设置mapper类
         // strategy.setSuperMapperClass("com.liudao51.test.mapper.BaseMapper");
         // ---设置service类

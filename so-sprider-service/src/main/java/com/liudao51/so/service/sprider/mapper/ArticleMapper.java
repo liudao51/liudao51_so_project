@@ -1,4 +1,4 @@
-package com.liudao51.so.mapper;
+package com.liudao51.so.service.sprider.mapper;
 
 import com.liudao51.so.entity.po.Article;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;

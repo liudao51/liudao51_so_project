@@ -15,29 +15,34 @@
     <version>1.0-SNAPSHOT</version>
 
     <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+        </dependency>
         <!-- mybatis-plus -->
         <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-boot-starter</artifactId>
-            <version>3.3.2</version>
         </dependency>
         <!-- mybatis-plus-generator -->
         <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-generator</artifactId>
-            <version>3.3.2</version>
         </dependency>
         <!-- mybatis-plus的velocity代码生成器模板引擎 -->
         <dependency>
             <groupId>org.apache.velocity</groupId>
             <artifactId>velocity-engine-core</artifactId>
-            <version>2.2</version>
         </dependency>
         <!-- p6spy 插件用于sql打印-->
         <dependency>
             <groupId>p6spy</groupId>
             <artifactId>p6spy</artifactId>
-            <version>3.8.7</version>
         </dependency>
 
         <!-- 内部项目 -->
@@ -60,7 +65,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
                     <!-- 当为spring-boot项目时,必须要指定该Main Class为全局的唯一入口, 用于作为命令行《java -jar xxx.jar》启动项目时的入口文件 -->
-                    <mainClass>com.liudao51.shop.ShopOrderWebApplication</mainClass>
+                    <mainClass>com.liudao51.so.service.sprider.SpriderServiceApp</mainClass>
                     <layout>ZIP</layout>
                     <!-- 没有该配置, devtools是不会生效 -->
                     <fork>true</fork>
@@ -103,7 +108,7 @@
                 <directory>src/main/java</directory>
                 <includes>
                     <!-- 设置mybatis的xml文件打包到target中的位置 -->
-                    <include>com/liudao51/so/mapper/*.xml</include>
+                    <include>com/liudao51/so/service/sprider/mapper/*.xml</include>
                 </includes>
                 <filtering>false</filtering>
             </resource>
