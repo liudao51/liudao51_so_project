@@ -1,0 +1,172 @@
+/**
+ * Globals
+ */
+
+body {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    color: #555;
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+    margin-top: 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: normal;
+    color: #333;
+}
+
+/**
+ * Override Bootstrap's default container.
+ */
+
+@media (min-width: 1200px) {
+    .container {
+        width: 970px;
+    }
+}
+
+/**
+ * page-header
+ */
+.page-header {
+    background-color: #ffffff;
+    /*-webkit-box-shadow: inset 0 -2px 5px rgba(0, 0, 0, .1);
+    box-shadow: inset 0 -2px 5px rgba(0, 0, 0, .1);*/
+    margin: 0px;
+    border: none;
+    padding: 10px 0px;
+}
+.page-search {
+}
+
+/**
+ * page-bodyer
+ */
+
+.page-bodyer {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.page-main {
+    font-size: 18px;
+    line-height: 1.5;
+}
+/**
+ * 搜索条数: result-nums
+ */
+.result-nums {
+    font-size: 13px;
+    height: 40px;
+    line-height: 40px;
+}
+
+.result-nums .nums-text {
+    color: #999;
+}
+
+/**
+ * 搜索结果列表: result-post
+ */
+.result-post {
+    margin: 10px 0px 0px 0px;
+}
+
+.result-item {
+    margin-bottom: 30px;
+    font-size: 13px;
+}
+
+.result-item .res-title {
+    font-size: 18px;
+    line-height: 18px;
+}
+
+.result-item .snapshoot-time {
+    color: #9195A3;
+}
+
+.result-item .res-desc {
+    font: 13px/21px Arial, sans-serif;
+    margin: 5px 0px 0px 0px;
+}
+
+.result-item .res-link {
+    margin: 5px 0px 0px 0px;
+}
+
+.result-item .link-site {
+    color: #626675;
+    font-family: Arial, sans-serif;
+}
+
+.result-item .link-snapshoot:link, .result-item .link-snapshoot:visited {
+    color: #9195A3;
+    text-decoration: underline;
+}
+
+.result-item .link-snapshoot:hover, .result-item .link-snapshoot:active {
+    color: #626675;
+    text-decoration: underline;
+}
+
+/**
+ * 相关搜索：result-related
+ */
+.result-related .title {
+    color: #222;
+    font: 14px/22px Arial, sans-serif;
+    line-height: 14px;
+}
+
+.result-related .keyword-table {
+    border-collapse: collapse;
+    display: table;
+}
+
+.result-related .keyword-table th {
+    width: 224px;
+    line-height: 26px;
+}
+
+.result-related .keyword-table .keyword {
+    width: 224px;
+    overflow: hidden;
+    display: inline-block;
+    text-overflow: ellipsis;
+    vertical-align: top;
+    margin-top: 2px;
+    font: 14px/22px Arial, sans-serif;
+}
+/**
+ * 右边侧栏：page-sidebar
+ */
+.page-sidebar{
+    padding: 30px 15px 15px 15px;
+}
+.sidebar-item {
+    margin: 0 15px 30px 0px;
+    font:14px/22px Arial,sans-serif;
+}
+.sidebar-item .title {
+    color: #222;
+    font-weight: 400;
+}
+
+/**
+ * 页面底部：page-footer
+ */
+.page-footer {
+    padding: 20px 0;
+    color: #999;
+    text-align: center;
+    background-color: #f9f9f9;
+    border-top: 1px solid #e5e5e5;
+}
+
+.page-footer p:last-child {
+    margin-bottom: 0;
+}

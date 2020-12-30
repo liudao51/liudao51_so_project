@@ -1,0 +1,12 @@
+server:
+  port: 8821
+spring:
+  thymeleaf:
+    cache: false  #在开发时关闭thymeleaf缓存,避免修改后需要重启服务器
+    prefix: classpath:/templates/
+    suffix: .html
+    encoding: utf-8
+    check-template-location: true
+
+
+

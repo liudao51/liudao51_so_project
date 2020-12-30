@@ -1,19 +1,19 @@
-package com.liudao51.so.controller;
+package com.liudao51.so.controller.sprider;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
  * <p>
- * 文章概要 前端控制器
+ * 文章关键词 前端控制器
  * </p>
  *
  * @author Jewel
  * @since 2020-12-24
  */
 @RestController
-@RequestMapping("/article")
-public class ArticleController {
+@RequestMapping("/articleKeyword")
+public class ArticleKeywordController {
 
 }
 

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" th:href="@{~/favicon.ico}">
+
+    <title>精选文章搜索系统</title>
+
+    <!-- Bootstrap core CSS -->
+    <link th:href="@{~/css/bootstrap.min.css}" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link th:href="@{~css/ie10-viewport-bug-workaround.css}" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link th:href="@{~/css/default.css}" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]>
+    <script th:href="@{~/js/ie8-responsive-file-warning.js}"></script>
+    <![endif]-->
+    <script th:src="@{~/js/ie-emulation-modes-warning.js}"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script th:src="@{~/js/html5shiv.min.js}"></script>
+    <script th:src="@{~/js/respond.min.js}"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+<header class="page-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8 page-search">
+                <!-- 搜索框 -->
+                <div class="search">
+                    <form>
+                        <div class="input-group">
+                            <div class="input-group-addon" id="sizing-addon2">
+                                <span>关键词</span>
+                            </div>
+                            <input type="text" class="form-control" aria-label="..." th:value="${wd}" />
+                            <div class="input-group-btn">
+                                <button type="submit" class="btn btn-primary"> 搜 索 一 下</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<bodyer class="page-bodyer">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8 page-main">
+
+                <!-- 搜索条数 -->
+                <div class="result-nums">
+                    <span class="nums-text">共为您找到相关结果约10,900,000个</span>
+                </div>
+
+                <!-- 搜索结果列表 -->
+                <div class="result-post">
+                    <div class="result-item">
+                        <h3 class="res-title">
+                            <a target="_blank" href="#">【信息检索】Java简易搜索引擎原理及实现(四)利用布尔..._...</a>
+                        </h3>
+                        <div class="res-desc">
+                            <span class="snapshoot-time">2019年5月29日</span>
+                            【信息检索】Java简易搜索引擎原理及实现(三)B+树索引和轮排索引结构,我们在倒排索引的基础上,引入了B+树索引和轮排索引,以支持通配符的...
+                        </div>
+                        <div class="res-link">
+                            <a class="link-site" target="_blank" href="#">www.iteye.com/resource/qq_4012...</a>
+                            <span class="link-separate">-</span>
+                            <a class="link-snapshoot" target="_blank" href="#">网页快照</a>
+                        </div>
+                    </div>
+
+                    <div class="result-item">
+                        <h3 class="res-title">
+                            <a target="_blank" href="#">【信息检索】Java简易搜索引擎原理及实现(四)利用布尔..._...</a>
+                        </h3>
+                        <div class="res-desc">
+                            <span class="snapshoot-time">2019年5月29日</span>
+                            【信息检索】Java简易搜索引擎原理及实现(三)B+树索引和轮排索引结构,我们在倒排索引的基础上,引入了B+树索引和轮排索引,以支持通配符的...
+                        </div>
+                        <div class="res-link">
+                            <a class="link-site" target="_blank" href="#">www.iteye.com/resource/qq_4012...</a>
+                            <span class="link-separate">-</span>
+                            <a class="link-snapshoot" target="_blank" href="#">网页快照</a>
+                        </div>
+                    </div>
+
+                    <div class="result-item">
+                        <h3 class="res-title">
+                            <a target="_blank" href="#">【信息检索】Java简易搜索引擎原理及实现(四)利用布尔..._...</a>
+                        </h3>
+                        <div class="res-desc">
+                            <span class="snapshoot-time">2019年5月29日</span>
+                            【信息检索】Java简易搜索引擎原理及实现(三)B+树索引和轮排索引结构,我们在倒排索引的基础上,引入了B+树索引和轮排索引,以支持通配符的...
+                        </div>
+                        <div class="res-link">
+                            <a class="link-site" target="_blank" href="#">www.iteye.com/resource/qq_4012...</a>
+                            <span class="link-separate">-</span>
+                            <a class="link-snapshoot" target="_blank" href="#">网页快照</a>
+                        </div>
+                    </div>
+
+                    <div class="result-item">
+                        <h3 class="res-title">
+                            <a target="_blank" href="#">【信息检索】Java简易搜索引擎原理及实现(四)利用布尔..._...</a>
+                        </h3>
+                        <div class="res-desc">
+                            <span class="snapshoot-time">2019年5月29日</span>
+                            【信息检索】Java简易搜索引擎原理及实现(三)B+树索引和轮排索引结构,我们在倒排索引的基础上,引入了B+树索引和轮排索引,以支持通配符的...
+                        </div>
+                        <div class="res-link">
+                            <a class="link-site" target="_blank" href="#">www.iteye.com/resource/qq_4012...</a>
+                            <span class="link-separate">-</span>
+                            <a class="link-snapshoot" target="_blank" href="#">网页快照</a>
+                        </div>
+                    </div>
+
+                    <div class="result-item">
+                        <h3 class="res-title">
+                            <a target="_blank" href="#">【信息检索】Java简易搜索引擎原理及实现(四)利用布尔..._...</a>
+                        </h3>
+                        <div class="res-desc">
+                            <span class="snapshoot-time">2019年5月29日</span>
+                            【信息检索】Java简易搜索引擎原理及实现(三)B+树索引和轮排索引结构,我们在倒排索引的基础上,引入了B+树索引和轮排索引,以支持通配符的...
+                        </div>
+                        <div class="res-link">
+                            <a class="link-site" target="_blank" href="#">www.iteye.com/resource/qq_4012...</a>
+                            <span class="link-separate">-</span>
+                            <a class="link-snapshoot" target="_blank" href="#">网页快照</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 相关搜索 -->
+                <div class="result-related">
+                    <span class="title">相关搜索</span>
+                    <table class="keyword-table" cellpadding="0">
+                        <tbody>
+                        <tr>
+                            <th><a class="keyword" href="#">active的意思是什么</a></th>
+                            <td></td>
+                            <th><a class="keyword" href="#">active的意思是什么</a></th>
+                            <td></td>
+                            <th><a class="keyword" href="#">active的意思是什么</a></th>
+                        </tr>
+                        <tr>
+                            <th><a class="keyword" href="#">active的意思是什么</a></th>
+                            <td></td>
+                            <th><a class="keyword" href="#">active的意思是什么</a></th>
+                            <td></td>
+                            <th><a class="keyword" href="#">active的意思是什么</a></th>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <nav aria-label="Page navigation">
+                    <ul class="pagination">
+                        <li>
+                            <a href="#" aria-label="Previous">
+                                <span aria-hidden="true">上一页</span>
+                            </a>
+                        </li>
+                        <li class="active"><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li>
+                            <a href="#" aria-label="Next">
+                                <span aria-hidden="true">下一页</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+            </div><!-- /.page-main -->
+            <div class="col-sm-3 col-sm-offset-1 page-sidebar">
+                <div class="sidebar-item">
+                    <span class="title">最新文章</span>
+                    <ol class="list-unstyled">
+                        <li><a href="#">March 2014</a></li>
+                        <li><a href="#">February 2014</a></li>
+                        <li><a href="#">January 2014</a></li>
+                        <li><a href="#">December 2013</a></li>
+                        <li><a href="#">November 2013</a></li>
+                        <li><a href="#">October 2013</a></li>
+                        <li><a href="#">September 2013</a></li>
+                        <li><a href="#">August 2013</a></li>
+                        <li><a href="#">July 2013</a></li>
+                        <li><a href="#">June 2013</a></li>
+                        <li><a href="#">May 2013</a></li>
+                        <li><a href="#">April 2013</a></li>
+                    </ol>
+                </div>
+                <div class="sidebar-item">
+                    <span class="title">热门关键词</span>
+                    <ol class="list-unstyled">
+                        <li><a href="#">GitHub</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Facebook</a></li>
+                    </ol>
+                </div>
+            </div><!-- /.page-sidebar -->
+        </div>
+    </div>
+</bodyer>
+
+<footer class="page-footer">
+    <div class="container">
+        <div class="foot">
+            <p>精选文章搜索引擎</p>
+        </div>
+    </div>
+</footer>
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script th:src="@{~/js/jquery.min.js}"></script>
+<script>window.jQuery || document.write('<script th:src="@{~/js/jquery.min.js}"><\/script>')</script>
+<script th:src="@{~/js/bootstrap.min.js}"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script th:src="@{~/js/ie10-viewport-bug-workaround.js}"></script>
+</body>
+</html>

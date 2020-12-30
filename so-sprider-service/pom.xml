@@ -65,7 +65,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
                     <!-- 当为spring-boot项目时,必须要指定该Main Class为全局的唯一入口, 用于作为命令行《java -jar xxx.jar》启动项目时的入口文件 -->
-                    <mainClass>com.liudao51.so.service.sprider.SpriderServiceApp</mainClass>
+                    <mainClass>com.liudao51.so.service.SpriderServiceApp</mainClass>
                     <layout>ZIP</layout>
                     <!-- 没有该配置, devtools是不会生效 -->
                     <fork>true</fork>

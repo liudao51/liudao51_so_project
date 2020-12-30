@@ -1,4 +1,4 @@
-package com.liudao51.so.controller;
+package com.liudao51.so.controller.sprider;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

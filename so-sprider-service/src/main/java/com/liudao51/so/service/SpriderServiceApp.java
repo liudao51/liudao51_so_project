@@ -1,4 +1,4 @@
-package com.liudao51.so.service.sprider;
+package com.liudao51.so.service;
 
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
@@ -11,6 +11,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @MapperScan("com.liudao51.so.service.sprider.mapper")
 public class SpriderServiceApp {
     public static void main(String[] args) {
-        SpringApplication.run(SpringApplication.class, args);
+        SpringApplication.run(SpriderServiceApp.class, args);
     }
 }
