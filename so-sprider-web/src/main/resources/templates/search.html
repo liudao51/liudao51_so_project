@@ -15,7 +15,7 @@
     <link th:href="@{~/css/bootstrap.min.css}" rel="stylesheet">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <link th:href="@{~css/ie10-viewport-bug-workaround.css}" rel="stylesheet">
+    <link th:href="@{~/css/ie10-viewport-bug-workaround.css}" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link th:href="@{~/css/default.css}" rel="stylesheet">
@@ -41,12 +41,12 @@
             <div class="col-sm-8 page-search">
                 <!-- 搜索框 -->
                 <div class="search">
-                    <form>
+                    <form method="get" action="/s">
                         <div class="input-group">
                             <div class="input-group-addon" id="sizing-addon2">
                                 <span>关键词</span>
                             </div>
-                            <input type="text" class="form-control" aria-label="..." th:value="${wd}" />
+                            <input type="text" class="form-control" aria-label="..." th:value="${wd}" name="wd" />
                             <div class="input-group-btn">
                                 <button type="submit" class="btn btn-primary"> 搜 索 一 下</button>
                             </div>
@@ -75,13 +75,13 @@
                             <a target="_blank" href="#">【信息检索】Java简易搜索引擎原理及实现(四)利用布尔..._...</a>
                         </h3>
                         <div class="res-desc">
-                            <span class="snapshoot-time">2019年5月29日</span>
+                            <span class="snapshot-time">2019年5月29日</span>
                             【信息检索】Java简易搜索引擎原理及实现(三)B+树索引和轮排索引结构,我们在倒排索引的基础上,引入了B+树索引和轮排索引,以支持通配符的...
                         </div>
                         <div class="res-link">
                             <a class="link-site" target="_blank" href="#">www.iteye.com/resource/qq_4012...</a>
                             <span class="link-separate">-</span>
-                            <a class="link-snapshoot" target="_blank" href="#">网页快照</a>
+                            <a class="link-snapshot" target="_blank" href="#">网页快照</a>
                         </div>
                     </div>
 
@@ -90,13 +90,13 @@
                             <a target="_blank" href="#">【信息检索】Java简易搜索引擎原理及实现(四)利用布尔..._...</a>
                         </h3>
                         <div class="res-desc">
-                            <span class="snapshoot-time">2019年5月29日</span>
+                            <span class="snapshot-time">2019年5月29日</span>
                             【信息检索】Java简易搜索引擎原理及实现(三)B+树索引和轮排索引结构,我们在倒排索引的基础上,引入了B+树索引和轮排索引,以支持通配符的...
                         </div>
                         <div class="res-link">
                             <a class="link-site" target="_blank" href="#">www.iteye.com/resource/qq_4012...</a>
                             <span class="link-separate">-</span>
-                            <a class="link-snapshoot" target="_blank" href="#">网页快照</a>
+                            <a class="link-snapshot" target="_blank" href="#">网页快照</a>
                         </div>
                     </div>
 
@@ -105,13 +105,13 @@
                             <a target="_blank" href="#">【信息检索】Java简易搜索引擎原理及实现(四)利用布尔..._...</a>
                         </h3>
                         <div class="res-desc">
-                            <span class="snapshoot-time">2019年5月29日</span>
+                            <span class="snapshot-time">2019年5月29日</span>
                             【信息检索】Java简易搜索引擎原理及实现(三)B+树索引和轮排索引结构,我们在倒排索引的基础上,引入了B+树索引和轮排索引,以支持通配符的...
                         </div>
                         <div class="res-link">
                             <a class="link-site" target="_blank" href="#">www.iteye.com/resource/qq_4012...</a>
                             <span class="link-separate">-</span>
-                            <a class="link-snapshoot" target="_blank" href="#">网页快照</a>
+                            <a class="link-snapshot" target="_blank" href="#">网页快照</a>
                         </div>
                     </div>
 
@@ -120,13 +120,13 @@
                             <a target="_blank" href="#">【信息检索】Java简易搜索引擎原理及实现(四)利用布尔..._...</a>
                         </h3>
                         <div class="res-desc">
-                            <span class="snapshoot-time">2019年5月29日</span>
+                            <span class="snapshot-time">2019年5月29日</span>
                             【信息检索】Java简易搜索引擎原理及实现(三)B+树索引和轮排索引结构,我们在倒排索引的基础上,引入了B+树索引和轮排索引,以支持通配符的...
                         </div>
                         <div class="res-link">
                             <a class="link-site" target="_blank" href="#">www.iteye.com/resource/qq_4012...</a>
                             <span class="link-separate">-</span>
-                            <a class="link-snapshoot" target="_blank" href="#">网页快照</a>
+                            <a class="link-snapshot" target="_blank" href="#">网页快照</a>
                         </div>
                     </div>
 
@@ -135,13 +135,13 @@
                             <a target="_blank" href="#">【信息检索】Java简易搜索引擎原理及实现(四)利用布尔..._...</a>
                         </h3>
                         <div class="res-desc">
-                            <span class="snapshoot-time">2019年5月29日</span>
+                            <span class="snapshot-time">2019年5月29日</span>
                             【信息检索】Java简易搜索引擎原理及实现(三)B+树索引和轮排索引结构,我们在倒排索引的基础上,引入了B+树索引和轮排索引,以支持通配符的...
                         </div>
                         <div class="res-link">
                             <a class="link-site" target="_blank" href="#">www.iteye.com/resource/qq_4012...</a>
                             <span class="link-separate">-</span>
-                            <a class="link-snapshoot" target="_blank" href="#">网页快照</a>
+                            <a class="link-snapshot" target="_blank" href="#">网页快照</a>
                         </div>
                     </div>
                 </div>

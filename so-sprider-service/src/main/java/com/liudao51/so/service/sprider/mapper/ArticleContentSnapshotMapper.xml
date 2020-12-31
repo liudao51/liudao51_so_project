@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.liudao51.so.service.sprider.mapper.ArticleKeywordMapper">
+<mapper namespace="com.liudao51.so.service.sprider.mapper.ArticleContentSnapshotMapper">
 
     <!-- 通用查询映射结果 -->
-    <resultMap id="BaseResultMap" type="com.liudao51.so.entity.po.ArticleKeyword">
+    <resultMap id="BaseResultMap" type="com.liudao51.so.entity.po.ArticleContentSnapshot">
         <id column="id" property="id" />
         <result column="article_id" property="articleId" />
-        <result column="keyword" property="keyword" />
+        <result column="content" property="content" />
         <result column="created_time" property="createdTime" />
         <result column="updated_time" property="updatedTime" />
         <result column="version" property="version" />

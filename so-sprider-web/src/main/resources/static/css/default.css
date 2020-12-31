@@ -85,7 +85,7 @@ h6, .h6 {
     line-height: 18px;
 }
 
-.result-item .snapshoot-time {
+.result-item .snapshot-time {
     color: #9195A3;
 }
 
@@ -103,12 +103,12 @@ h6, .h6 {
     font-family: Arial, sans-serif;
 }
 
-.result-item .link-snapshoot:link, .result-item .link-snapshoot:visited {
+.result-item .link-snapshot:link, .result-item .link-snapshot:visited {
     color: #9195A3;
     text-decoration: underline;
 }
 
-.result-item .link-snapshoot:hover, .result-item .link-snapshoot:active {
+.result-item .link-snapshot:hover, .result-item .link-snapshot:active {
     color: #626675;
     text-decoration: underline;
 }

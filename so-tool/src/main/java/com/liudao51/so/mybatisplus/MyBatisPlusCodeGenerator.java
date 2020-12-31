@@ -74,7 +74,7 @@ public class MyBatisPlusCodeGenerator {
         gc.setMapperName("%sMapper");
         gc.setXmlName("%sMapper");
         gc.setServiceName("I%sService");
-        gc.setServiceImplName("%sServerImpl");
+        gc.setServiceImplName("%sServiceImpl");
         gc.setControllerName("%sController");
         mpg.setGlobalConfig(gc);
 

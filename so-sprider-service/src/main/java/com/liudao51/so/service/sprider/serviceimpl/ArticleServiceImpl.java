@@ -19,7 +19,7 @@ import java.io.Serializable;
  * @since 2020-12-24
  */
 @Service
-public class ArticleServerImpl implements IArticleService {
+public class ArticleServiceImpl implements IArticleService {
 
     @Autowired
     private ArticleMapper articleMapper;

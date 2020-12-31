@@ -1,7 +1,7 @@
 package com.liudao51.so.service.sprider.mapper;
 
-import com.liudao51.so.entity.po.ArticleContent;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.liudao51.so.entity.po.ArticleContent;
 import org.springframework.stereotype.Repository;
 
 /**
@@ -10,7 +10,7 @@ import org.springframework.stereotype.Repository;
  * </p>
  *
  * @author Jewel
- * @since 2020-12-24
+ * @since 2020-12-31
  */
 @Repository
 public interface ArticleContentMapper extends BaseMapper<ArticleContent> {

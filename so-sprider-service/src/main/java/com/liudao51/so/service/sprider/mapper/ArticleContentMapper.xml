@@ -9,6 +9,7 @@
         <result column="content" property="content" />
         <result column="created_time" property="createdTime" />
         <result column="updated_time" property="updatedTime" />
+        <result column="version" property="version" />
     </resultMap>
 
 </mapper>

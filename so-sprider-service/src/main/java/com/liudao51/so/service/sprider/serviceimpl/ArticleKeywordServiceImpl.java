@@ -12,6 +12,6 @@ import org.springframework.stereotype.Service;
  * @since 2020-12-24
  */
 @Service
-public class ArticleKeywordServerImpl implements IArticleKeywordService {
+public class ArticleKeywordServiceImpl implements IArticleKeywordService {
 
 }

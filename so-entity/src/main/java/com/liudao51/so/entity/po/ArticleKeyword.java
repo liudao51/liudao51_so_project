@@ -1,10 +1,8 @@
 package com.liudao51.so.entity.po;
 
-import com.baomidou.mybatisplus.annotation.Version;
-import com.baomidou.mybatisplus.annotation.FieldFill;
 import com.baomidou.mybatisplus.annotation.TableField;
-import java.io.Serializable;
 import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.Version;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
@@ -13,13 +11,15 @@ import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 import lombok.experimental.Accessors;
 
+import java.io.Serializable;
+
 /**
  * <p>
  * 文章关键词
  * </p>
  *
  * @author Jewel
- * @since 2020-12-24
+ * @since 2020-12-31
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
@@ -39,9 +39,9 @@ public class ArticleKeyword implements Serializable {
     @TableField(value = "article_id")
     private Long articleId;
 
-    @ApiModelProperty(value = "内容")
-    @TableField(value = "content")
-    private String content;
+    @ApiModelProperty(value = "关键词")
+    @TableField(value = "keyword")
+    private String keyword;
 
     @ApiModelProperty(value = "创建时间")
     @TableField(value = "created_time")
@@ -55,4 +55,5 @@ public class ArticleKeyword implements Serializable {
     @Version
     @TableField(value = "version")
     private Long version;
+
 }

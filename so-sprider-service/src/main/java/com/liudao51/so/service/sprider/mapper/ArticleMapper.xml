@@ -7,8 +7,11 @@
         <id column="id" property="id" />
         <result column="title" property="title" />
         <result column="description" property="description" />
+        <result column="from_url" property="fromUrl" />
+        <result column="site_url" property="siteUrl" />
         <result column="created_time" property="createdTime" />
         <result column="updated_time" property="updatedTime" />
+        <result column="version" property="version" />
     </resultMap>
 
 </mapper>
