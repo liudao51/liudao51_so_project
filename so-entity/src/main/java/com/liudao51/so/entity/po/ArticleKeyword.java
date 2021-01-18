@@ -50,10 +50,4 @@ public class ArticleKeyword implements Serializable {
     @ApiModelProperty(value = "更新时间")
     @TableField(value = "updated_time")
     private Long updatedTime;
-
-    @ApiModelProperty(value = "版本(用于乐观锁)")
-    @Version
-    @TableField(value = "version")
-    private Long version;
-
 }

@@ -1,7 +1,7 @@
 package com.liudao51.so.service.sprider.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.liudao51.so.entity.po.ArticleContentSnapshot;
+import com.liudao51.so.entity.po.ArticleSnapshot;
 import org.springframework.stereotype.Repository;
 
 /**
@@ -13,6 +13,6 @@ import org.springframework.stereotype.Repository;
  * @since 2020-12-31
  */
 @Repository
-public interface ArticleContentSnapshotMapper extends BaseMapper<ArticleContentSnapshot> {
+public interface ArticleSnapshotMapper extends BaseMapper<ArticleSnapshot> {
 
 }

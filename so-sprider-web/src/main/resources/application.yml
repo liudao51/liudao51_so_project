@@ -7,6 +7,8 @@ spring:
     suffix: .html
     encoding: utf-8
     check-template-location: true
-
-
-
+dubbo:
+  application:
+    name: sprider-web
+  registry:
+    address: zookeeper://127.0.0.1:2181

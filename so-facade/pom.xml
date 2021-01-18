@@ -6,7 +6,6 @@
         <artifactId>so-parent</artifactId>
         <groupId>com.liudao51.so</groupId>
         <version>1.0-SNAPSHOT</version>
-        <relativePath>../so-parent/pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 

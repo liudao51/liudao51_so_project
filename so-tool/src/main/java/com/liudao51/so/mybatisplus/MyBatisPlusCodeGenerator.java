@@ -116,7 +116,7 @@ public class MyBatisPlusCodeGenerator {
         //strategy.setSuperEntityClass(); //你自己的父类实体,没有就不用设置
         //strategy.setSuperEntityColumns(null); //写于父类中的公共字段
         strategy.setEntityLombokModel(true); //实体设置lombok
-        strategy.setVersionFieldName("version"); //设置乐观锁字段名
+        //strategy.setVersionFieldName("version"); //设置乐观锁字段名
         //strategy.setLogicDeleteFieldName("deleted"); //设置逻辑删除字段名
         //---设置自动填充
         //TableFill createdTime = new TableFill("created_time", FieldFill.INSERT);

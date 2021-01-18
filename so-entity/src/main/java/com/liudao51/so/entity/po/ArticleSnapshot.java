@@ -15,7 +15,7 @@ import java.io.Serializable;
 
 /**
  * <p>
- * 文章快照内容
+ * 文章快照
  * </p>
  *
  * @author Jewel
@@ -26,12 +26,12 @@ import java.io.Serializable;
 @Accessors(chain = true)
 @AllArgsConstructor
 @NoArgsConstructor
-@ApiModel(value="ArticleContentSnapshot对象", description="文章快照内容")
-public class ArticleContentSnapshot implements Serializable {
+@ApiModel(value="ArticleSnapshot对象", description="文章快照")
+public class ArticleSnapshot implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    @ApiModelProperty(value = "文章内容id")
+    @ApiModelProperty(value = "文章快照id")
     @TableId(value = "id")
     private Long id;
 
@@ -50,10 +50,4 @@ public class ArticleContentSnapshot implements Serializable {
     @ApiModelProperty(value = "更新时间")
     @TableField(value = "updated_time")
     private Long updatedTime;
-
-    @ApiModelProperty(value = "版本(用于乐观锁)")
-    @Version
-    @TableField(value = "version")
-    private Long version;
-
 }

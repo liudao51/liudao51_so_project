@@ -1,8 +1,12 @@
+import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.liudao51.so.entity.po.Article;
+import com.liudao51.so.entity.vo.ArticleSearchResultVo;
+import com.liudao51.so.facade.IArticleSearchService;
 import com.liudao51.so.facade.IArticleService;
 import com.liudao51.so.service.SpriderServiceApp;
 import org.junit.jupiter.api.Test;
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -18,10 +22,14 @@ import org.springframework.boot.test.context.SpringBootTest;
  */
 //使用：Junit 5
 @SpringBootTest(classes = {SpriderServiceApp.class, SpriderServiceTestApp.class})
+@MapperScan("com.liudao51.so.service.sprider.mapper")
 public class SpriderServiceTestApp {
 
     @Autowired
-    private IArticleService articleServerImpl;
+    private IArticleService articleService;
+
+    @Autowired
+    private IArticleSearchService articleSearchService;
 
     @Test
     public void testHello() {
@@ -30,15 +38,21 @@ public class SpriderServiceTestApp {
 
     @Test
     public void testGetList() {
-        Page<Article> articlePage = articleServerImpl.getArticleList(2, 1);
+        Page<Article> articlePage = articleService.getArticleList(2, 1);
         System.out.println(articlePage);
     }
 
     @Test
     public void testGetObj() {
         Long id = 2L;
-        Article article = articleServerImpl.getArticle(id);
+        Article article = articleService.getArticle(id);
         System.out.println(article);
+    }
+
+    @Test
+    public void testGetSearch() {
+        IPage<ArticleSearchResultVo> articleSearchPage = articleSearchService.getArticleSearchPage(1, 10);
+        System.out.println(articleSearchPage);
     }
 
 }

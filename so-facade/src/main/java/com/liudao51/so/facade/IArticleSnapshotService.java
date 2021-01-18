@@ -8,6 +8,6 @@ package com.liudao51.so.facade;
  * @author Jewel
  * @since 2020-12-31
  */
-public interface IArticleContentSnapshotService {
+public interface IArticleSnapshotService {
 
 }

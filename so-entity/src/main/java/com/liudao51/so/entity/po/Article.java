@@ -43,10 +43,6 @@ public class Article implements Serializable {
     @TableField(value = "description")
     private String description;
 
-    @ApiModelProperty(value = "入口url")
-    @TableField(value = "from_url")
-    private String fromUrl;
-
     @ApiModelProperty(value = "站点url")
     @TableField(value = "site_url")
     private String siteUrl;
@@ -58,10 +54,4 @@ public class Article implements Serializable {
     @ApiModelProperty(value = "更新时间")
     @TableField(value = "updated_time")
     private Long updatedTime;
-
-    @ApiModelProperty(value = "版本(用于乐观锁)")
-    @Version
-    @TableField(value = "version")
-    private Long version;
-
 }

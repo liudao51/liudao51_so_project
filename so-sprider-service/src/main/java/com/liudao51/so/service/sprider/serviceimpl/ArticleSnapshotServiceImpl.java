@@ -1,6 +1,6 @@
 package com.liudao51.so.service.sprider.serviceimpl;
 
-import com.liudao51.so.facade.IArticleContentSnapshotService;
+import com.liudao51.so.facade.IArticleSnapshotService;
 import org.springframework.stereotype.Service;
 
 /**
@@ -12,6 +12,6 @@ import org.springframework.stereotype.Service;
  * @since 2020-12-31
  */
 @Service
-public class ArticleContentSnapshotServiceImpl implements IArticleContentSnapshotService {
+public class ArticleSnapshotServiceImpl implements IArticleSnapshotService {
 
 }
