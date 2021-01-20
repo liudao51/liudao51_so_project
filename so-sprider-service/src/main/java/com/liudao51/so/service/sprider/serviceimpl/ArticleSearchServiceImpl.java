@@ -13,13 +13,15 @@ import com.liudao51.so.facade.IArticleSearchService;
 import com.liudao51.so.service.sprider.mapper.ArticleKeywordMapper;
 import com.liudao51.so.service.sprider.mapper.ArticleMapper;
 import com.liudao51.so.service.sprider.mapper.ArticleSnapshotMapper;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.dubbo.config.annotation.DubboService;
-import org.apache.dubbo.config.annotation.Service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * <p>
@@ -42,17 +44,21 @@ public class ArticleSearchServiceImpl implements IArticleSearchService {
     @Autowired
     private ArticleKeywordMapper articleKeywordMapper;
 
-    public IPage<ArticleSearchResultVo> getArticleSearchPage(Integer currentPage, Integer pageSize) {
+    public IPage<ArticleSearchResultVo> getArticleSearchPage(Integer currentPage, Integer pageSize, Map<String, Object> args) {
         //ArticleSearchResultVoPage对象
         IPage<ArticleSearchResultVo> articleSearchResultVoPage = new Page<>(currentPage, pageSize);
         //ArticleSearchResultVo对象集合
         List<ArticleSearchResultVo> articleSearchResultVos = new ArrayList<>();
 
         //文章对象集合
-        IPage<Article> articlePage = articleMapper.selectPage(
-                new Page<>(currentPage, pageSize),
-                new QueryWrapper<Article>().orderByDesc("id")
-        );
+        QueryWrapper<Article> qw = new QueryWrapper<>();
+        if (!CollectionUtilsX.isEmpty(args.keySet())) {
+            if (!ObjectUtilsX.isEmpty(args.get("keyword"))) {
+                qw.like("title", args.get("keyword")).or().like("description", args.get("keyword"));
+            }
+        }
+        qw.orderByDesc("id");
+        IPage<Article> articlePage = articleMapper.selectPage(new Page<>(currentPage, pageSize), qw);
 
         if (!ObjectUtilsX.isEmpty(articlePage) && !CollectionUtilsX.isEmpty(articlePage.getRecords())) {
             List<Article> articles = articlePage.getRecords();

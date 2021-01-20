@@ -10,6 +10,9 @@ import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * 参考：
  * SpringBoot系列: 单元测试: https://www.cnblogs.com/harrychinese/p/springboot_unittesting.html
@@ -51,7 +54,10 @@ public class SpriderServiceTestApp {
 
     @Test
     public void testGetSearch() {
-        IPage<ArticleSearchResultVo> articleSearchPage = articleSearchService.getArticleSearchPage(1, 10);
+        String wd = "java";
+        Map<String, Object> params = new HashMap<>();
+        params.put("keyword", wd);
+        IPage<ArticleSearchResultVo> articleSearchPage = articleSearchService.getArticleSearchPage(1, 10, params);
         System.out.println(articleSearchPage);
     }
 

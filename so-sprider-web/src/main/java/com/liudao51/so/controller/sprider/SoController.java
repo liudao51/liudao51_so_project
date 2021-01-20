@@ -1,6 +1,7 @@
 package com.liudao51.so.controller.sprider;
 
 import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.liudao51.so.common.util.ObjectUtilsX;
 import com.liudao51.so.entity.vo.ArticleSearchResultVo;
 import com.liudao51.so.facade.IArticleSearchService;
 import org.apache.dubbo.config.annotation.DubboReference;
@@ -10,6 +11,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * <p>
@@ -27,14 +30,20 @@ public class SoController {
     private IArticleSearchService articleSearchService;
 
     @GetMapping("/s")
-    public String searchArticle(HttpServletRequest request, Model model) {
+    public String searchArticle(HttpServletRequest request, Model model) throws Exception {
         String wd = request.getParameter("wd");
         //返回参数：关键词
         model.addAttribute("wd", wd);
 
         //返回参数：文章列表
-        IPage<ArticleSearchResultVo> articleSearchPage = articleSearchService.getArticleSearchPage(1, 10);
+        Map<String, Object> params = new HashMap<>();
+        params.put("keyword", wd);
+        IPage<ArticleSearchResultVo> articleSearchPage = articleSearchService.getArticleSearchPage(1, 10, params);
         System.out.println(articleSearchPage);
+
+        if (!ObjectUtilsX.isEmpty(articleSearchPage)) {
+            model.addAttribute("articleSearchPage", articleSearchPage);
+        }
 
         return "search";
     }
